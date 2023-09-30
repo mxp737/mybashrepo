@@ -59,5 +59,3 @@ elif [ $selection == "5" ]; then
 elif [ $selection == "6" ]; then
     wholesqure $firstNumber $secondNumber
 fi
-
-
