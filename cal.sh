@@ -51,5 +51,4 @@ elif [ $selection == "4" ]; then
     div $firstNumber $secondNumber
 elif [ $selection == "5" ]; then
     reminder $firstNumber $secondNumber
-
 fi
