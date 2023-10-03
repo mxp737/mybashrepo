@@ -45,7 +45,7 @@ reminder(){
 sum(){
     a=$1
     b=$2
-    sumResult=$(( $a^2+$b^2+ 2$a * $b ))
+    sumResult=$(( $a**2+$b**2 + 2*$a*$b ))
     echo "sum result is: $sumResult"
 }
 if [ $selection == "1" ]; then
