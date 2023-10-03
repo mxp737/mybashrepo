@@ -6,16 +6,17 @@ echo "2. Sub"
 echo "3. Mul"
 echo "4. Div"
 echo "5. Reminder"
+echo "6. Wholesqure"
 read selection
 
-if [ $selection == "1" ] || [ $selection == "2" ] || [ $selection == "3" ] || [ $selection == "4" ] || [ $selection == "5" ]; then
+if [ $selection == "1" ] || [ $selection == "2" ] || [ $selection == "3" ] || [ $selection == "4" ] || [ $selection == "5" ] || [ $selection == "6" ]; then
     echo "enter firstNumber"
     read firstNumber
 
     echo "enter secondNumber"
     read secondNumber
 else
-    echo "You have made an invalid section, please select from 1 to 4"
+    echo "You have made an invalid section, please select from 1 to 6"
 fi
 
 add(){
@@ -41,6 +42,10 @@ reminder(){
    reminderResult=$(( $1 % $2 ))
    echo "Reminder result is: $reminderResult"
 }
+wholesqure(){
+   wholesqureResult=$(( $1**2 + $2**2 + 2*$1*$2  ))
+    echo "Wholesqure result is: $wholesqureResult"
+}
 if [ $selection == "1" ]; then
     add $firstNumber $secondNumber
 elif [ $selection == "2" ]; then
@@ -51,4 +56,6 @@ elif [ $selection == "4" ]; then
     div $firstNumber $secondNumber
 elif [ $selection == "5" ]; then
     reminder $firstNumber $secondNumber
+elif [ $selection == "6" ]; then
+    wholesqure $firstNumber $secondNumber
 fi
